@@ -5,7 +5,7 @@
   "main": "app.js",
   "type": "module",
   "scripts": {
-    "test": "jest --ci unit"
+    "test": "jest --coverage unit"
   },
   "author": "Rafael Duarte",
   "license": "ISC",

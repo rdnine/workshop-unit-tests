@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "jest --collectCoverageFrom unit"
+    "test": "jest --coverage unit"
   },
   "author": "Rafael Duarte",
   "license": "ISC",
