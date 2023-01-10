@@ -1,7 +1,11 @@
-import path from 'path';
-import { promises as fs } from 'fs';
+const path = require('path');
+const { promises: fs } = require('fs');
 
-export default function writeData(data, filename) {
+function writeData(data, filename) {
   const storagePath = path.join(process.cwd(), 'data', filename);
   return fs.writeFile(storagePath, data);
+}
+
+module.exports = {
+  writeData
 }
