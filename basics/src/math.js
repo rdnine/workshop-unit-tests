@@ -7,4 +7,6 @@ function add(numbers) {
   return sum;
 }
 
-exports.add = add;
+module.exports = {
+  add
+}

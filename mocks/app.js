@@ -1,5 +1,5 @@
-import { generateReportData, storeData } from './src/data.js';
-import log from './src/utils/logger.js';
+const { generateReportData, storeData } = require('./src/data.js');
+const log = require('./src/utils/logger.js');
 
 const data = generateReportData(log);
 storeData(data);

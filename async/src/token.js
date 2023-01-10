@@ -1,10 +1,10 @@
-import jwt from 'jsonwebtoken';
+const jwt = require('jsonwebtoken');
 
-export function generateToken(userEmail, callback) {
+function generateToken(userEmail, callback) {
   jwt.sign({ email: userEmail }, 'secret', callback);
 }
 
-export function generateTokenPromise(userEmail) {
+function generateTokenPromise(userEmail) {
   const promise = new Promise((resolve, reject) => {
     jwt.sign({ email: userEmail }, 'secret', (error, token) => {
       if (error) {
@@ -16,4 +16,9 @@ export function generateTokenPromise(userEmail) {
   });
 
   return promise;
+}
+
+module.exports = {
+  generateToken,
+  generateTokenPromise
 }

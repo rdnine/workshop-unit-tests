@@ -10,5 +10,7 @@ function validateNumber(number) {
   }
 }
 
-exports.validateNumber = validateNumber;
-exports.validateStringNotEmpty = validateStringNotEmpty;
+module.exports = {
+  validateNumber,
+  validateStringNotEmpty
+}

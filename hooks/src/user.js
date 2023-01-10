@@ -1,4 +1,4 @@
-export class User {
+class User {
   constructor(name, email) {
     this.name = name;
     this.email = email;
@@ -12,11 +12,15 @@ export class User {
     this.email = newEmail;
   }
 
-  clearNamel() {
+  clearName() {
     this.name = '';
   }
 
   clearEmail() {
     this.email = '';
   }
+}
+
+module.exports = {
+  User
 }

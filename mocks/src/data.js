@@ -1,6 +1,6 @@
-import writeData from './utils/io.js';
+const writeData = require('./utils/io.js');
 
-export function generateReportData(logFn) {
+function generateReportData(logFn) {
   const data = 'Some dummy data for this demo app';
   if (logFn) {
     logFn(data);
@@ -9,9 +9,14 @@ export function generateReportData(logFn) {
   return data;
 }
 
-export async function storeData(data) {
+async function storeData(data) {
   if (!data) {
     throw new Error('No data received!');
   }
   await writeData(data, 'data.txt');
+}
+
+module.exports = {
+  generateReportData,
+  storeData
 }
