@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
-  "type": "module",
   "scripts": {
-    "test": "jest --ci unit"
+    "test": "jest --collectCoverageFrom unit"
   },
   "author": "Rafael Duarte",
   "license": "ISC",
